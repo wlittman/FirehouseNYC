@@ -1,7 +1,8 @@
-<h2>These are my pictures</h2>
+<div class="custom-font">
+<h2 class="cool-font-big text-center">My Web Development Journey</h2>
 
 <% @pics.each do |pic| %>
-	<div>
+	<div class ="boxy span4">
 		<h2>
 			Hour <%= pic.hour %>
 		</h2>
@@ -12,7 +13,7 @@
 
 		<p>
 			I learned that
-			<%= pic.emotion %>
+			<%= pic.learned %>
 		</p>
 	</div>
 

@@ -10,6 +10,7 @@ class PicsController < ApplicationController
 
 	def create
 		@pic = Pic.create(params[:pic])
-		redirect_to_pics_path
+		redirect_to pics_path
 	end
+
 end
