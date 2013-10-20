@@ -18,6 +18,13 @@
 			I learned that
 			<%= pic.learned %>
 		</p>
+
+		<p><% if pic.user.present? %>
+			<b>Email:</b>
+			<%= pic.user.email %>
+		</p>
+		<% end %>
+
 	</div>
 
 <% end %>
