@@ -1,30 +1,37 @@
 <div class="custom-font">
-<h2 class="cool-font-big text-center">My Web Development Journey</h2>
+	<h2 class="cool-font-big text-center">My Web Development Journey</h2>
 
-<% @pics.each do |pic| %>
-	<div class ="boxy span4">
-		<h2>
-			Hour <%= pic.hour %>
-		</h2>
-		<div>
-		<%= image_tag pic.image.to_s %>
+	<div class="container">
+
+		<div class="row">
+
+			<% @pics.each do |pic| %>
+				<div class ="boxy-dark span4">
+					<h2>
+						Hour <%= pic.hour %>
+					</h2>
+
+					<div>
+					<%= image_tag pic.image.to_s %>
+					</div>
+
+					<p>
+						<%= pic.emotion %>
+					</p>
+
+					<p>
+						I learned that
+						<%= pic.learned %>
+					</p>
+
+					<% if pic.user.present? %>
+						<p>
+							<b>Email:</b>
+							<%= pic.user.email %>
+						</p>
+					<% end %>
+				</div>
+			<% end %>
 		</div>
-
-		<p>
-			<%= pic.emotion %>
-		</p>
-
-		<p>
-			I learned that
-			<%= pic.learned %>
-		</p>
-
-		<p><% if pic.user.present? %>
-			<b>Email:</b>
-			<%= pic.user.email %>
-		</p>
-		<% end %>
-
 	</div>
-
-<% end %>
+</div>
